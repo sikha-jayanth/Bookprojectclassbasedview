@@ -1,0 +1,17 @@
+<html>
+    <body>
+        {%for book in books%}
+        {{book.Book_name}}
+        {{book.author}}
+        {{book.pages}}
+        {{book.price}}
+        <a href="{%url 'details' book.id%}">View</a>
+        <a href="{%url 'delete' book.id%}">delete book</a>
+        <a href="{%url 'update' book.id%}">update book</a>
+        <br>
+        <hr>
+        {%endfor%}
+        <a href="{%url 'create'%}">create book</a>
+        
+    </body>
+</html>
